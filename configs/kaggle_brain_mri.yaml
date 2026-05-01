@@ -1,0 +1,34 @@
+experiment:
+  name: kaggle_brain_mri_calibration
+  dataset_name: Kaggle Brain MRI
+  dataset_path: null
+  output_dir: outputs
+  seed: 42
+  reverse_order: false
+  min_exp: 1
+  max_exp: null
+  print_configs_only: false
+
+hyperparameters:
+  model: [GPAF, LoRA, ConvAdapter]
+  net_lr: [0.001]
+  num_epochs: [30]
+  batch_size: [null]
+  activation_type:
+    - full_relu
+    - stage3_4_act2_blockshared_kglap
+    - stage4_act2only_channelwise_kglap
+    - stage3_4_act2_blockshared_prelu
+    - stage4_act2only_channelwise_prelu
+    - stage3_4_act2_blockshared_swishlearn
+    - stage4_act2only_channelwise_swishlearn
+  act_lr: [0.000001]
+  act_optimizer: [adam]
+  reduction: [16]
+  r: [4, 8]
+  lora_alpha: [8, 16]
+  modifiers:
+    - TrainBN: false
+      Deferred: null
+      Regularization: null
+  data_subset: [0.005, 0.01, 0.1, 0.5, 1.0]

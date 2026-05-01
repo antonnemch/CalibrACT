@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments and editor state
+.venv/
+.env
+.vscode/
+.idea/
+
+# Local data, checkpoints, logs, and generated outputs
+/datasets/
+/pretrained_model/
+/saved_models/
+/logs/
+/outputs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.sif
+*.out
+*.xlsx
+
+# Legacy workbench files kept out of the clean portfolio branch
+/benchmark.py
+/train.py
+/models/
+/utils/
+/paper_figs/
+/z_misc/
+/KGLAP_MODEL_SUMMARIES.txt
+/run_benchmark.slurm
+/scripts/watch_log.sh
+/activation_maps_output.txt
+/PEFT_grid_search.py
+
+# Keep the report under docs/, not as a root-level PDF artifact.
+/*.pdf
