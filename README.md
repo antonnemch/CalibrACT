@@ -1,8 +1,8 @@
-# CalibraCT
+# CalibrACT
 
 Calibration-focused transfer learning for pretrained CNNs using learnable activation functions.
 
-CalibraCT is the code artifact for my research internship paper, [*Investigating low-resource adaptation of pre-trained CNNs to new domains through non-linearity calibration*](docs/report.pdf). The project studies whether a frozen ImageNet-pretrained ResNet-50 can be adapted to a low-resource medical imaging task by tuning only a tiny set of nonlinear activation parameters plus the classifier head.
+CalibrACT is the code artifact for my research internship paper, [*Investigating low-resource adaptation of pre-trained CNNs to new domains through non-linearity calibration*](docs/report.pdf). The project studies whether a frozen ImageNet-pretrained ResNet-50 can be adapted to a low-resource medical imaging task by tuning only a tiny set of nonlinear activation parameters plus the classifier head.
 
 The main result is nuanced: learnable activations do not consistently beat a linear-head baseline on raw accuracy, but they provide a strong calibration and parameter-efficiency tradeoff. In low-data regimes, channel-wise PReLU and KGLAP sit on the AUC/ECE Pareto frontier while training less than 0.06% of the model parameters.
 
